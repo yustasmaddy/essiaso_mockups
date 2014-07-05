@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Вкладочный GUI Авторизация-Регистрация Пользователей ЕССиАСО</title>
+
+    <!-- Bootstrap and FontAwersome дополнительно к glyphicon icon 4.1.0 (05.07.2014) & core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!-- Добавлен Custom CSS for dropdown lists'stype (05.07.2014) -->
+    <link href="css/yustas-ddl-n-input.css" rel="stylesheet">
+</head>
+
+<body>
+<div class="container">
+    <div class="row">
+<p></p>
+<p></p>
+    </div>
+</div>
+
+<div class="container">
+<div class="row">
+  <div class="col-xs-9 col-xs-offset-2 col-sm-9 col-sm-offset-2 col-md-9 col-md-offset-2">
+<!--Authorization n registration tabs-->
+<div id="content">
+    <ul id="tabs" class="nav nav-tabs" data-tabs="tabs">
+        <li class="active"><a href="#userauth" data-toggle="tab">Авторизация Пользователя ЕССиАСО</a></li>
+        <li><a href="#userregistration" data-toggle="tab">Регистрация Пользователя ЕССиАСО</a></li>
+    </ul>
+    <div id="my-tab-content" class="tab-content">
+        <div class="tab-pane fade in active" id="userauth">
+<form class="form-horizontal">
+<fieldset>
+
+<!-- Наименование формы -->
+<legend>Авторизация Пользователя ЕССиАСО</legend>
+<form id="signupForm" method="POST" action="#hahaha" accept-charset="UTF-8">
+  <div class="input-group">
+       <span class="input-group-addon"><i class="fa fa-user"></i></span>
+        <input id="username" class="form-control input" placeholder="Введите Имя Пользователя" required="required" maxlength="100" type="text" name="username" value="">
+   </div>
+<p class="help-block">Забыли имя пользователя?</p>
+   <div class="input-group">
+          <span class="input-group-addon"><i class="fa fa-asterisk"></i></i></span>
+             <input id="password_confirmation" class="form-control input" placeholder="Введите пароль доступа" required="required" maxlength="60" type="password" name="password_confirmation">
+   </div>
+<p class="help-block">Забыли пароль доступа?</p>   
+   <div class="form-group">
+          <button type="submit" id="btn-signup" class="btn btn-block btn-primary">Войти</button>
+   </div>
+   <div class="form-group">
+          <button type="submit" id="btn-cancel" class="btn btn-block btn-default">Отмена</button>
+   </div>
+</form>
+    <div class="form-group">
+        <div class="topCushion">Если Вы ещё не зарегистрированы в ЕССиАСО, <a href="#userregistration" data-toggle="tab">пройдите регистрацию</a></div>
+    </div>
+</fieldset>
+</form>
+        </div>
+        <div class="tab-pane fade" id="userregistration">
+        <form class="form-horizontal">
+<fieldset>
+<!-- Наименование формы -->
+<legend>Регистрация Пользователя ЕССиАСО</legend>
+<form id="signupForm" method="POST" action="#hahaha" accept-charset="UTF-8">
+  <div class="input-group">
+    <span class="input-group-addon">Тип мед.учреждения</span>
+      <select id="contact_subject" class="form-control" name="contact_subject">
+          <option value="General">Учреждения управления здравоохранением</option>
+          <option value="General">Стационары</option>
+          <option value="General">Амбулаторно-клинические комплексы</option>
+      </select>
+  </div>  
+<br/>
+  <div class="input-group">
+    <span class="input-group-addon">Профиль мед.учреждения</span>
+      <select id="contact_subject" class="form-control" name="contact_subject">
+          <option value="General">Многопрофильный стационар</option>
+          <option value="General">Психиатрический стационар</option>          
+          <option value="General">Туберкулезный стационар</option>
+          <option value="General">Кожно-венерологический стационар</option>
+          <option value="General">Наркологический стационар</option>
+          <option value="General">Детский стационар</option>
+          <option value="General">Учреждение родовспоможения</option>
+      </select>
+  </div>  
+<br/>
+  <div class="input-group">
+       <span class="input-group-addon"><i class="fa fa-user-md"></i></span>
+        <input id="username" class="form-control input" placeholder="Введите Вашу Фамилию" required="required" maxlength="100" type="text" name="username" value="">
+   </div>
+<br/>
+  <div class="input-group">
+       <span class="input-group-addon"><i class="fa fa-user-md"></i></span>
+        <input id="username" class="form-control input" placeholder="Введите Ваше Имя" required="required" maxlength="100" type="text" name="username" value="">
+   </div>
+<br/>
+  <div class="input-group">
+       <span class="input-group-addon"><i class="fa fa-user-md"></i></span>
+        <input id="username" class="form-control input" placeholder="Введите Ваше Отчество" required="required" maxlength="100" type="text" name="username" value="">
+   </div>
+<br/>
+  <div class="input-group">
+    <span class="input-group-addon">Ваша должность</span>
+      <select id="contact_subject" class="form-control" name="contact_subject">
+          <option value="General">Главный врач</option>
+          <option value="General">Заведующий отделением</option>
+          <option value="General">Главный бухгалтер</option>
+          <option value="General">Врач-специалист</option>
+          <option value="General">Врач общей практики</option>
+      </select>
+  </div>  
+<br/>
+  <div class="input-group">
+       <span class="input-group-addon"><i class="fa fa-phone"></i></span>
+        <input id="username" class="form-control input" placeholder="Введите номер Вашего рабочего телефона" required="required" maxlength="100" type="text" name="username" value="">
+   </div>
+<br/>
+  <div class="input-group">
+       <span class="input-group-addon"><i class="fa fa-mobile"></i></span>
+        <input id="username" class="form-control input" placeholder="Введите номер Вашего мобильного телефона" maxlength="100" type="text" name="username" value="">
+   </div>
+<br/>
+  <div class="input-group">
+       <span class="input-group-addon"><i class="fa fa-user"></i></span>
+        <input id="username" class="form-control input" placeholder="Введите желаемое Имя Пользователя" required="required" maxlength="100" type="text" name="username" value="">
+   </div>
+<br>
+   <div class="input-group">
+        <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+         <input id="email" class="form-control input" placeholder="Введите официальный e.-Mail Вашего медицинского учреждения (группу знаков до символа @)" required="required" maxlength="100" type="text" name="Email" value="">
+                <span class="input-group-addon">@zdrav.spb.ru</span>
+   </div>
+<br/>
+   <div class="input-group">
+          <span class="input-group-addon"><i class="fa fa-asterisk"></i></span>
+            <input id="password" class="form-control input" placeholder="Введите желаемый пароль доступа" required="required" maxlength="60" type="password" name="password">
+   </div>
+<br/>
+   <div class="input-group">
+          <span class="input-group-addon"><i class="fa fa-asterisk"></i></i></span>
+             <input id="password_confirmation" class="form-control input" placeholder="Введите пароль доступа ещё раз" required="required" maxlength="60" type="password" name="password_confirmation">
+   </div>
+<br/>
+   <div class="form-group">
+          <button type="submit" id="btn-signup" class="btn btn-block btn-primary" data-toggle="tooltip" data-placement="top" title="Нажмите кнопку, чтобы завершить регистрацию">Регистрироваться</button>
+   </div>
+</form>
+    <div class="form-group">
+        <div class="topCushion">Если Вы уже являетесь Пользователем ЕССиАСО? <a href="#userauth" data-toggle="tab">Войдите</a></div>
+    </div>
+    <div class="form-group">
+         <p>Нажав кнопку <kbd>Регистрироваться</kbd>, Вы соглашаетесь с <a href="#terms-of-service" target="_blank">Условиями использования</a> web-приложения ЕССиАСО и <a href="#privacy" target="_blank">Политикой конфиденциальности</a>.</p>
+    </div>
+</fieldset>
+</form>
+
+            </div>
+        </div>
+</div> <!-- all the screens dimentional -->
+    </div>
+    <!-- /.container -->
+        </div>
+    </div>
+</div>
+    <!-- /.container -->
+
+    <!-- JavaScript -->
+    <!-- Добавлен кастомный js: yustas-ddl-n-input.js для визуализациии списка (05.07.2014) & тултип-скрипт -->
+
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/yustas-ddl-n-input.js"></script>
+    <script src="js/tooltip.js"></script>
+</body>
+</html>
